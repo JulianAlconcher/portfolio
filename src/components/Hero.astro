@@ -1,0 +1,47 @@
+---
+import Github from "../../public/icons/Github.astro"
+import LinkedIn from "../../public/icons/LinkedIn.astro"
+import Mail from "../../public/icons/Mail.astro"
+import Badge from "./Badge.astro"
+import SocialPill from "./SocialPill.astro"
+
+const personalImageAlt = "Julian Alconcher"
+
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <a
+      href="https://linkedin.com/in/midudev"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-white sm:text-5xl dark:text-white"
+  >
+    Hola, soy Julian
+  </h1>
+  <p
+    class="mt-6 text-xl text-white opacity-80 dark:text-white/80 "
+  >
+    +0 años de experencia - estudiante de quinto año de Ingenieria en Sistemas de Informacion - Universidad Nacion del Sur
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:alconcherjulian@gmail.com">
+      <Mail class="size-4" />
+      Contáctame
+    </SocialPill>
+    <SocialPill href="https://github.com/JulianAlconcher">
+        <Github class="size-4" />
+        GitHub
+      </SocialPill>
+    <SocialPill href="https://www.linkedin.com/in/juli%C3%A1n-alconcher-3429a7304/">
+      <LinkedIn class="size-4" />
+      LinkedIn
+    </SocialPill>
+  </nav>
+</div>

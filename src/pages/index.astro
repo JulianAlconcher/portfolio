@@ -5,41 +5,50 @@ import LinkedIn from '../../public/icons/LinkedIn.astro';
 import Github from '../../public/icons/Github.astro';
 import SocialPill from '../components/SocialPill.astro';
 import Mail from '../../public/icons/Mail.astro';	
+import SectionContainer from '../components/SectionContainer.astro';
+import Hero from '../components/Hero.astro';
+import Briefcase from '../../public/icons/Briefcase.astro';
+import Experience from '../components/Experience.astro';
 ---
 
 <Layout title="Portfolio de Julian Alconcher. Estudiante de Ingenieria en Sistemas de Informacion">
-	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">Hola, soy Julián 
-				<a 
-				href="https://www.linkedin.com/in/juli%C3%A1n-alconcher-3429a7304/" 
-				class="flex justify-center items-center"
-				target="_blank"
-				rel="noopener"
-				>
-				
-					<Badge>Disponible para trabajar</Badge>
-				</a>
-			</h1>
-			<h2 class="text-xl opacity-75 text-wrap">+0 años de experencia. Estudiante de 5to año de Ingenieria en sistemas de informacion - UNS.
-				De Bahia Blanca, Argentina.
-			</h2>
-			<nav class="flex gap-x-2 mt-2">
-				
-					<SocialPill href="https://www.linkedin.com/in/juli%C3%A1n-alconcher-3429a7304/" >
-						<LinkedIn/>
-						LinkedIn
-					</SocialPill>
-					<SocialPill href="https://github.com/JulianAlconcher" >
-						<Github/>
-						GitHub
-					</SocialPill>
-					<SocialPill href="https://github.com/JulianAlconcher" >
-						<Mail/>
-						alconcherjulian@gmail.com
-					</SocialPill>
-				
-				</nav>
-		</section>
-	</main>
+	<main class="px-4">
+		<SectionContainer class="py-16 md:py-36">
+		  <Hero>
+		  </slot>
+		</Hero>
+		</SectionContainer>
+		
+		<div class="space-y-24">
+		<SectionContainer id="experiencia">
+		  <h2
+			class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+		  >
+			<Briefcase class="size-8" />
+			Experiencia laboral
+		  </h2>
+		  <Experience />
+		</SectionContainer>
+	
+		<!-- <SectionContainer id="proyectos">
+		  <h2
+			class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+		  >
+			<CodeIcon class="size-7" />
+			Proyectos
+		  </h2>
+		  <Projects />
+		</SectionContainer>
+	
+		<SectionContainer id="sobre-mi">
+		  <h2
+			class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+		  >
+			<ProfileCheck class="size-8" />
+			Sobre mí
+		  </h2>
+		  <AboutMe />
+		</SectionContainer> -->
+	  </div>
+	  </main>
 </Layout>
