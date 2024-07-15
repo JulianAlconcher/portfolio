@@ -1,3 +1,9 @@
-Porfolio para programadores y desarrolladores
+# Portfolio - Julian Alconcher
 
-Basado en portfolio made by MiduDev
+Portfolio para programadores y desarrolladores, inspirado en el porfolio de midudev. 
+
+## Stack
+
+- Astro Framework
+- Tailwind
+- Flowbite
