@@ -1,0 +1,129 @@
+---
+import NextJS from "../../public/icons/NextJS.astro"
+import Tailwind from "../../public/icons/Tailwind.astro"
+import LinkButton from "./LinkButton.astro"
+import Link from "../../public/icons/Link.astro"
+import GitHub from "../../public/icons/Github.astro"
+import Python from "../../public/icons/Python.astro"
+import Prolog from "../../public/icons/Prolog.astro"
+import Java from "../../public/icons/Java.astro"
+import React from "../../public/icons/React.astro"
+import Javascript from "../../public/icons/Javascript.astro"
+import Typescript from "../../public/icons/Typescript.astro"
+
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  PROLOG: {
+    name: "Prolog",
+    class: "bg-[#4d8c3c] text-white",
+    icon: Prolog,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#f0db4f] text-black",
+    icon: Javascript,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#007acc] text-white",
+    icon: Typescript,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#61dafb] text-black",
+    icon: React,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#306998] text-white",
+    icon: Python,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-[#5382a1] text-white",
+    icon: Java,
+  },
+}
+const PROJECTS = [
+  {
+    title: "GymLAB - Gestión de gimnasios y entrenadores personales",
+    description:
+      "Aplicacion web que analiza y muestra estadísticas de gimnasios y entrenadores personales. Creada con React, Tailwind CSS y Python.",
+    link: "",
+    github: "https://github.com/JulianAlconcher/GymLAB-Proyecto-Fisica-2024",
+    image: "/projectImages/gymlab.png",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.PYTHON],
+  },
+  {
+    title: "Movie Merch - E-commerce de juguetes, peluches y articulos de películas",
+    description:
+      "E-commerce de juguetes, peluches y articulos de películas. Integracion de MercadoPago, API externas, seccion de admin. Creada con Next.js y Tailwind CSS.",
+    link: "https://adventjs.dev",
+    image: "/projectImages/mm.png",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+]
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+  <div class="w-full md:w-1/2">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+    </div>
+  </div>
+
+  <div class="w-full md:w-1/2 md:max-w-lg">
+    <h3 class="text-2xl font-bold  dark:text-gray-100">
+      {title}
+    </h3>
+    <div class="flex flex-wrap mt-2">
+      <ul class="flex flex-row mb-2 gap-x-2">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+      <footer class="flex items-end justify-start mt-4 gap-x-4">
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="size-6" />
+              Code
+              
+            </LinkButton>
+          )}
+          {link && (
+            <LinkButton href={link}>
+              <Link class="size-4" />
+              Preview
+            </LinkButton>
+          )}
+        </footer>
+    </div>
+  </div>
+</article>
+    ))
+  }
+</div>
+
+

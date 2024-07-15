@@ -1,14 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
-import LinkedIn from '../../public/icons/LinkedIn.astro';
-import Github from '../../public/icons/Github.astro';
-import SocialPill from '../components/SocialPill.astro';
-import Mail from '../../public/icons/Mail.astro';	
 import SectionContainer from '../components/SectionContainer.astro';
 import Hero from '../components/Hero.astro';
-import Briefcase from '../../public/icons/Briefcase.astro';
-import Experience from '../components/Experience.astro';
+import Experience from '../components/Studies.astro';
+import Book from '../../public/icons/Book.astro';
+import Projects from '../components/Projects.astro';
+import CodeIcon from '../../public/icons/CodeIcon.astro';
 ---
 
 <Layout title="Portfolio de Julian Alconcher. Estudiante de Ingenieria en Sistemas de Informacion">
@@ -20,19 +17,19 @@ import Experience from '../components/Experience.astro';
 		</SectionContainer>
 		
 		<div class="space-y-24">
-		<SectionContainer id="experiencia">
+		<SectionContainer id="estudios">
 		  <h2
 			class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white dark:text-white"
 		  >
-			<Briefcase class="text-white size-8" />
+			<Book class="text-white size-8" />
 			Mis estudios
 		  </h2>
 		  <Experience />
 		</SectionContainer>
 	
-		<!-- <SectionContainer id="proyectos">
+		<SectionContainer id="proyectos">
 		  <h2
-			class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+			class="flex items-center mb-6 text-3xl font-semibold gap-x-3 dark:text-white"
 		  >
 			<CodeIcon class="size-7" />
 			Proyectos
@@ -40,7 +37,7 @@ import Experience from '../components/Experience.astro';
 		  <Projects />
 		</SectionContainer>
 	
-		<SectionContainer id="sobre-mi">
+		<!-- <SectionContainer id="sobre-mi">
 		  <h2
 			class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
 		  >
