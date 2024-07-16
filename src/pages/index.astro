@@ -17,11 +17,21 @@ import ProfileCheck from '../../public/icons/ProfileCheck.astro';
 		  </slot>
 		</Hero>
 		</SectionContainer>
+
+		<SectionContainer id="proyectos">
+			<h2
+			  class="flex items-center mb-6 text-3xl font-semibold gap-x-3 dark:text-white"
+			>
+			  <CodeIcon class="size-7" />
+			  Proyectos
+			</h2>
+			<Projects />
+		  </SectionContainer>
 		
 		<div class="space-y-24">
 		<SectionContainer id="estudios">
 		  <h2
-			class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white dark:text-white"
+			class="flex items-center mt-20 text-3xl font-semibold gap-x-3 text-white dark:text-white"
 		  >
 			<Book class="text-white size-8" />
 			Mis estudios
@@ -29,15 +39,7 @@ import ProfileCheck from '../../public/icons/ProfileCheck.astro';
 		  <Experience />
 		</SectionContainer>
 	
-		<SectionContainer id="proyectos">
-		  <h2
-			class="flex items-center mb-6 text-3xl font-semibold gap-x-3 dark:text-white"
-		  >
-			<CodeIcon class="size-7" />
-			Proyectos
-		  </h2>
-		  <Projects />
-		</SectionContainer>
+		
 	
 		<SectionContainer id="sobre-mi">
 		  <h2
